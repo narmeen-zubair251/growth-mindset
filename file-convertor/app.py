@@ -19,22 +19,6 @@ if files :
             df = df.drop_duplicates()
             st.success("successfully Removed Duplicates")
             st.dataframe(df.head())
-    #  # Condition 01:
-    #         if st.checkbox(f"File Missing values - {file.name}"):
-    #             if not df.select_dtypes(include=["number"]).empty:
-    #               df.fillna(df.select_dtypes(include=["number"]).mean(), inplace=True)
-    #               st.success("Missing values filled with mean")
-    #   # Conditio 02: 
-    #             elif not df.select_dtypes(include=["object"]) .empty:
-    #               for column in df.select_dtypes(include=["object"]).columns: 
-    #                 df[column] .fillna(df[column] .mode()[0] , inplace=True)
-    #                 st.succes("Missing values filled with mode")   
-    #   # Condition 03:  
-    #             else:
-    #               df.fillna("Unknown" , inplace = True) 
-    #               st.success("Missing values filled with Unknown")           
-                  
-    #               st.dataframe(df.head())
 
 
             selected_columns = st.multiselect(f"Select Columns - {file.name}", df.columns, default=df.columns)
